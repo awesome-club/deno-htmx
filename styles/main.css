@@ -1,0 +1,144 @@
+:root {
+  --radius-lg: 12px;
+  --radius: 8px;
+  --margin: 30px;
+  --margin-lg: 45px;
+  --margin-sm: 15px;
+  --margin-xs: 10px;
+  --font-family: "Montserrat";
+  --font-size: 17px;
+}
+
+body {
+  margin: 0;
+  background: #EEE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+.app {
+  width: 800px;
+  display: flex;
+}
+
+aside {
+  flex: 1;
+  text-align: center;
+}
+
+aside img {
+  border-radius: var(--radius-lg);
+  max-width: 100%;
+}
+
+aside h1 {
+  text-align: center;
+  font-size: 42px;
+}
+
+main {
+  flex: 2;
+  margin-left: var(--margin-lg);
+}
+
+aside .btn {
+  margin: var(--margin) 0 0;
+}
+
+.btn {
+  height: 42px;
+  line-height: 42px;
+  border: 0;
+  background: #D8D8D8;
+  color: #FFF;
+  border-radius: var(--radius);
+  padding: 0 var(--margin-sm);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  font-weight: 600;
+  opacity: .9;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #111;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+input,
+textarea {
+  border: 2px solid #CCC;
+  background: none;
+  width: 100%;
+  border-radius: var(--radius);
+  font-size: var(--font-size);
+  padding: var(--margin-xs);
+  outline: none !important;
+  margin-bottom: var(--margin-xs);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: var(--margin);
+}
+
+form {
+  margin-top: var(--margin-sm);
+}
+
+form footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form footer .btn {
+  margin: 0 var(--margin-xs);
+}
+
+.posts header {
+  margin: var(--margin) 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.posts header h2 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.posts header nav {
+  margin-left: auto;
+}
+
+.posts header button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  opacity: .8;
+}
+
+.posts header button:hover {
+  opacity: 1;
+}
+
+.posts header button svg {
+  width: 22px;
+  height: 22px;
+  fill: #777;
+}
+
+.posts p {
+  margin: 5px 0 0;
+}

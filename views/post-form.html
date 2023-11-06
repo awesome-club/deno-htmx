@@ -1,0 +1,14 @@
+<form
+  hx-post="/posts"
+  hx-target="this"
+  hx-swap="outerHTML">
+
+  <input type="hidden" name="id" value="<%= it.id %>" />
+  <input type="text" name="title" value="<%= it.title %>" placeholder="Title"/>
+  <textarea name="content"><%= it.content %></textarea>
+
+  <footer>
+    <button class="btn" hx-get="/posts">Cancel</button>
+    <button class="btn primary">Save</button>
+  </footer>
+</form>

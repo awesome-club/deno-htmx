@@ -1,0 +1,37 @@
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,100&display=swap"
+        rel="stylesheet">
+
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <link rel="stylesheet" href="/main.css"/>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <h1>Micro.</h1>
+    <img src="/hero.png" />
+
+    <button class="btn primary" hx-get="/posts/form/" hx-target="#main-view">Write</button>
+  </aside>
+
+  <main>
+    <input type="search" placeholder="Search..."
+      name="key"
+      hx-get="/search"
+      hx-trigger="keyup changed delay:500ms"
+      hx-target="#main-view" />
+
+    <div
+      hx-get="/posts"
+      hx-trigger="load"
+      hx-target="#main-view"
+      kx-on:htmx:timeout="alert('Failed to fetch posts')">
+      <div id="main-view"></div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
